@@ -1,6 +1,9 @@
 plugins {
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.jetbrainsKotlinAndroid)
+    alias(libs.plugins.kotlinxSerialization)
+    alias(libs.plugins.devToolsKspGoogle)
+    alias(libs.plugins.daggerHiltAndroid)
 }
 
 android {
@@ -18,6 +21,7 @@ android {
         vectorDrawables {
             useSupportLibrary = true
         }
+
     }
 
     buildTypes {
@@ -66,4 +70,22 @@ dependencies {
     androidTestImplementation(libs.androidx.ui.test.junit4)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
+
+
+    //kotlinX Serialization
+    implementation(libs.org.jetbrains.kotlinx)
+
+    //retrofit
+    implementation(libs.com.square.retrofit)
+    implementation(libs.com.square.retrofit.converter.gson)
+    implementation(libs.com.square.retrofit.converter.kotlinx)
+
+    //dagger hilt
+    implementation(libs.com.google.dagger.hilt.android)
+    ksp(libs.com.google.dagger.hilt.compiler)
+//    implementation(libs.androidx.hilt.navigation.compose)
+
+    //OkHttpClient
+    implementation(libs.com.square.okhttp3)
+
 }
