@@ -71,6 +71,10 @@ dependencies {
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
 
+//    implementation("androidx.lifecycle:lifecycle-viewmodel:2.7.0")
+    // Compose Navigation
+    implementation(libs.androidx.navigation.compose)
+
 
     //kotlinX Serialization
     implementation(libs.org.jetbrains.kotlinx)
@@ -83,7 +87,7 @@ dependencies {
     //dagger hilt
     implementation(libs.com.google.dagger.hilt.android)
     ksp(libs.com.google.dagger.hilt.compiler)
-//    implementation(libs.androidx.hilt.navigation.compose)
+    implementation(libs.androidx.hilt.navigation.compose)
 
     //OkHttpClient
     implementation(libs.com.square.okhttp3)

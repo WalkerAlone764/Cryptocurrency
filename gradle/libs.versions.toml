@@ -11,11 +11,15 @@ composeBom = "2023.08.00"
 kotlinXSerialization = "1.6.0"
 kotlinXSerializationConverter = "2.11.0"
 daggerHilt = "2.48"
+daggerHiltCompose = "1.2.0"
 devToolsKsp = "1.9.20-1.0.14"
+navigationCompose = "2.7.7"
 okHttpClient = "4.12.0"
+
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
+androidx-navigation-compose = { module = "androidx.navigation:navigation-compose", version.ref = "navigationCompose" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
 androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
@@ -36,7 +40,7 @@ com-square-retrofit = { group = "com.squareup.retrofit2", name = "retrofit", ver
 com-square-okhttp3 = { group = "com.squareup.okhttp3", name="okhttp", version.ref = "okHttpClient" }
 com-google-dagger-hilt-android = { group = "com.google.dagger", name = "hilt-android", version.ref = "daggerHilt" }
 com-google-dagger-hilt-compiler = { group = "com.google.dagger", name = "hilt-compiler", version.ref = "daggerHilt" }
-androidx-hilt-navigation-compose = { group = "androidx.hilt", name = "hilt-navigation-compose", version.ref = "daggerHilt" }
+androidx-hilt-navigation-compose = { group = "androidx.hilt", name = "hilt-navigation-compose", version.ref = "daggerHiltCompose" }
 
 
 [plugins]
