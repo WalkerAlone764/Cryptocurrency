@@ -12,7 +12,6 @@ import javax.inject.Inject
 class GetCurrencyListUseCase @Inject constructor(
     private val repository: SimpleSwapRepository
 ) {
-
     operator fun invoke(): Flow<Resources<List<CryptoCurrency>>> {
         return flow {
             try {
