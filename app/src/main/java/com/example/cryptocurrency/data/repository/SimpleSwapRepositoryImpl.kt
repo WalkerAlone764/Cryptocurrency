@@ -8,10 +8,10 @@ class SimpleSwapRepositoryImpl(
     private val api: SimpleSwapApi
 ): SimpleSwapRepository {
     override suspend fun getAllCryptoCurrency(): List<CryptoCurrency> {
-        TODO("Not yet implemented")
+        return api.getAllCryptoCurrency()
     }
 
     override suspend fun getCryptoBySymbol(symbol: String): CryptoCurrency {
-        TODO("Not yet implemented")
+        return api.getCryptoBySymbol(symbol)
     }
 }
