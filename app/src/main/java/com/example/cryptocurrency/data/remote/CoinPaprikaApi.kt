@@ -1,15 +1,14 @@
 package com.example.cryptocurrency.data.remote
 
 import com.example.cryptocurrency.data.remote.dto.Coin
+import com.example.cryptocurrency.data.remote.dto.CoinDetail
 import com.example.cryptocurrency.data.remote.dto.CryptoCurrency
 import retrofit2.http.GET
 import retrofit2.http.Path
 
-interface SimpleSwapApi {
-    @GET("/get_all_currencies")
+interface CoinPaprikaApi {
+    @GET("/v1/coins")
     suspend fun getAllCryptoCurrency(): List<Coin>
-
-    @GET("/get_currency?{symbol}")
-    suspend fun getCryptoBySymbol(@Path("symbol") symbol: String): CryptoCurrency
-
+    @GET("/v1/coins/?{coin_id}")
+    suspend fun getCryptoByCoinId(@Path("coin_id") coinId: String): CoinDetail
 }
