@@ -33,6 +33,7 @@ object NetworkModule {
 
         val json = Json {
             ignoreUnknownKeys = true
+            isLenient = true
         }
 
         return Retrofit.Builder().baseUrl(Constants.BASE_URL).addConverterFactory(
